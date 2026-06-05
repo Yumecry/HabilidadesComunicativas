@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voces Informadas - Trastorno Límite de la Personalidad (TLP)</title>
+
+    <!-- Meta SEO Tags -->
+    <meta name="description"
+        content="Blog académico enfocado en la investigación del Trastorno Límite de la Personalidad (TLP) y la comunicación académica. Desarrollado por el proyecto Voces Informadas.">
+    <meta name="keywords"
+        content="TLP, Trastorno Límite de la Personalidad, Psicología, Salud Mental, Texto Académico, Comunicación Oral, ODS 3, ODS 9">
+    <meta name="author" content="Equipo de Investigación Voces Informadas">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind Configuration & Theme Extension -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fbfb',
+                            100: '#dcf7f7',
+                            200: '#beebeb',
+                            300: '#94dcdc',
+                            400: '#60c3c5',
+                            500: '#0ea5a9', /* Cyan/Teal base */
+                            600: '#08858b',
+                            700: '#096a70',
+                            800: '#0d575c',
+                            900: '#10494d',
+                            950: '#04282c',
+                        },
+                        navy: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS styles for smooth interactions, typography, and print layouts -->
+    <style type="text/css">
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .academic-title {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Glassmorphism custom effects */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .dark .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+
+        .dark .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .dark ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+
+        .dark ::-webkit-scrollbar-thumb {
+            background: #475569;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+
+        /* Interactive zoom layout classes */
+        .zoom-img-container {
+            cursor: zoom-in;
+            overflow: hidden;
+        }
+
+        .zoom-img-container img {
+            transition: transform 0.3s ease;
+        }
+
+        .zoom-img-container:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Active navigation state transition styling */
+        .nav-link-active {
+            color: #0ea5a9;
+            font-weight: 600;
+            border-left-color: #0ea5a9;
+            background-color: rgba(14, 165, 169, 0.05);
+        }
+
+        .dark .nav-link-active {
+            color: #60c3c5;
+            border-left-color: #60c3c5;
+            background-color: rgba(96, 195, 197, 0.08);
+        }
+
+        /* Print styling rules */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+
+            body {
+                background: white !important;
+                color: black !important;
+            }
+
+            main {
+                padding-left: 0 !important;
+            }
+
+            .print-page {
+                width: 100%;
+                margin: 0;
+                padding: 1.5cm;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-navy-50 text-navy-800 dark:bg-navy-950 dark:text-navy-100 transition-colors duration-300 antialiased min-h-screen flex flex-col">
+
+    <!-- BACKGROUND PATTERNS / FLOATING AESTHETICS -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-40 dark:opacity-20">
+        <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-brand-200 blur-[128px]"></div>
+        <div class="absolute top-1/3 -right-40 w-96 h-96 rounded-full bg-brand-300 blur-[128px]"></div>
+        <div class="absolute -bottom-40 left-1/4 w-[500px] h-[500px] rounded-full bg-brand-100 blur-[160px]"></div>
+    </div>
+
+    <!-- MOBILE HEADER (Sticky top bar for smaller screens) -->
+    <header
+        class="lg:hidden sticky top-0 z-40 w-full glass-nav border-b border-navy-200/80 dark:border-navy-800/80 px-4 py-3 flex items-center justify-between no-print">
+        <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-brand-500 flex items-center justify-center text-white font-bold text-lg">V
+            </div>
+            <span class="font-bold tracking-tight text-navy-900 dark:text-white">Voces Informadas</span>
+        </div>
+        <div class="flex items-center gap-2">
+            <!-- Theme Toggle Mobile -->
+            <button id="theme-toggle-mobile"
+                class="p-2 rounded-lg text-navy-500 hover:text-navy-800 dark:text-navy-400 dark:hover:text-white transition-all duration-200 hover:bg-navy-100 dark:hover:bg-navy-800"
+                aria-label="Cambiar tema">
+                <!-- Sun Icon -->
+                <svg id="theme-toggle-light-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 2.293a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm2.121 4.414a1 1 0 01.707.293l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 01.707-1.414zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-2.293 4a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM11 17a1 1 0 100-2h-1a1 1 0 100 2h1zm-4-2.293a1 1 0 01-1.414 0l-.707-.707a1 1 0 111.414-1.414l.707.707a1 1 0 010 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1zM8 5.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0z" />
+                </svg>
+                <!-- Moon Icon -->
+                <svg id="theme-toggle-dark-icon-mobile" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                </svg>
+            </button>
+            <!-- Menu button -->
+            <button id="mobile-menu-btn"
+                class="p-2 rounded-lg text-navy-500 hover:text-navy-800 dark:text-navy-400 dark:hover:text-white transition-all duration-200 hover:bg-navy-100 dark:hover:bg-navy-800"
+                aria-label="Abrir menú">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN WRAPPER: NAVIGATION + CONTAINER -->
+    <div class="flex-1 flex w-full relative z-10">
+
+        <!-- NAVIGATION SIDEBAR (Fixed desktop, Drawer mobile) -->
+        <aside id="sidebar"
+            class="no-print fixed inset-y-0 left-0 w-80 z-50 glass-nav border-r border-navy-200/80 dark:border-navy-800/80 flex flex-col justify-between py-6 px-5 transition-transform duration-300 transform -translate-x-full lg:translate-x-0">
+            <!-- Sidebar Header -->
+            <div class="flex flex-col gap-6">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500 flex items-center justify-center text-white font-extrabold text-xl shadow-md shadow-brand-500/20">
+                            V</div>
+                        <div class="flex flex-col">
+                            <span
+                                class="font-extrabold tracking-tight text-navy-900 dark:text-white leading-tight">Voces
+                                Informadas</span>
+                            <span
+                                class="text-xs text-brand-600 dark:text-brand-400 font-semibold uppercase tracking-wider">Blog
+                                Académico</span>
+                        </div>
+                    </div>
+                    <!-- Close button mobile -->
+                    <button id="close-sidebar-btn"
+                        class="lg:hidden p-1 rounded-lg hover:bg-navy-100 dark:hover:bg-navy-800 text-navy-500 dark:text-navy-400"
+                        aria-label="Cerrar menú">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <hr class="border-navy-200/60 dark:border-navy-800/60">
+
+                <!-- Navigation List -->
+                <nav class="flex flex-col gap-1.5 overflow-y-auto max-h-[60vh] pr-1">
+                    <span
+                        class="text-[11px] font-bold text-navy-400 dark:text-navy-500 uppercase tracking-widest px-3 mb-2">SECCIONES
+                        DEL BLOG</span>
+                    <a href="#introduccion"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">1</span>
+                        <span>Introducción</span>
+                    </a>
+                    <a href="#mapa-conceptual"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">2</span>
+                        <span>Mapa Conceptual del Texto</span>
+                    </a>
+                    <a href="#trailer-video"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">3</span>
+                        <span>Tráiler Expositivo</span>
+                    </a>
+                    <a href="#mapa-mental"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">4</span>
+                        <span>Mapa Mental de Comunicación</span>
+                    </a>
+                    <a href="#produccion-academica"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">5</span>
+                        <span>Síntesis y Reseña</span>
+                    </a>
+                    <a href="#anexos-coevaluacion"
+                        class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
+                        <span
+                            class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">6</span>
+                        <span>Evidencias y Coevaluación</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Sidebar Footer: Theme Toggle & Info -->
+            <div class="flex flex-col gap-4">
+                <hr class="border-navy-200/60 dark:border-navy-800/60">
+                <!-- Theme Toggle Button Desktop -->
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-semibold text-navy-400 dark:text-navy-500">APARIENCIA</span>
+                    <button id="theme-toggle-desktop"
+                        class="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-navy-200 dark:border-navy-800 hover:bg-navy-100 dark:hover:bg-navy-800 text-sm font-medium text-navy-600 dark:text-navy-300 transition-colors duration-200">
+                        <span id="theme-toggle-text-desktop">Modo Oscuro</span>
+                        <!-- Sun Icon -->
+                        <svg id="theme-toggle-light-icon-desktop" class="hidden w-4 h-4 text-brand-500"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 2.293a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zm2.121 4.414a1 1 0 01.707.293l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 01.707-1.414zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-2.293 4a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM11 17a1 1 0 100-2h-1a1 1 0 100 2h1zm-4-2.293a1 1 0 01-1.414 0l-.707-.707a1 1 0 111.414-1.414l.707.707a1 1 0 010 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1zM8 5.5a2.5 2.5 0 115 0 2.5 2.5 0 01-5 0z" />
+                        </svg>
+                        <!-- Moon Icon -->
+                        <svg id="theme-toggle-dark-icon-desktop" class="hidden w-4 h-4 text-navy-400"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+                        </svg>
+                    </button>
+                </div>
+                <!-- Project info -->
+                <div class="text-[11px] text-navy-400 dark:text-navy-500 leading-relaxed">
+                    <p class="font-bold text-navy-600 dark:text-navy-400 mb-0.5">Voces Informadas</p>
+                    <p>Proyecto Universitario de Investigación sobre TLP y Habilidades de Comunicación Oral y Escrita.
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- BACKDROP MOBILE MENU -->
+        <div id="sidebar-backdrop" class="fixed inset-0 bg-navy-950/40 backdrop-blur-sm z-40 lg:hidden hidden no-print">
+        </div>
+
+        <!-- MAIN CONTENT PANEL -->
+        <main class="w-full lg:pl-80 flex-1 flex flex-col overflow-x-hidden min-h-screen">
+
+            <!-- ACADEMIC HERO HEADER BANNER -->
+            <section
+                class="relative bg-gradient-to-br from-navy-900 via-navy-800 to-brand-950 text-white py-20 px-6 sm:px-12 lg:px-16 overflow-hidden flex flex-col justify-center min-h-[360px] no-print">
+                <!-- Abstract vector layout shapes -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1" />
+                            </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill="url(#grid)" />
+                    </svg>
+                </div>
+                <div
+                    class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-brand-500/20 rounded-full blur-[100px]">
+                </div>
+
+                <div class="relative max-w-4xl z-10">
+                    <span
+                        class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 border border-brand-500/40 text-brand-300 uppercase tracking-widest mb-4">
+                        <span class="w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+                        Investigación e Innovación Académica
+                    </span>
+                    <h1
+                        class="academic-title text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.15] mb-6 text-white">
+                        Voces Informadas
+                    </h1>
+                    <p class="text-base sm:text-lg lg:text-xl text-navy-200/90 font-light max-w-2xl leading-relaxed">
+                        Un espacio académico multidisciplinario dedicado al análisis y difusión científica del <strong
+                            class="text-brand-300 font-semibold">Trastorno Límite de la Personalidad (TLP)</strong> y
+                        las competencias de comunicación académica.
+                    </p>
+                </div>
+            </section>
+
+            <!-- MAIN ARTICLES / SECTIONS -->
+            <div class="px-4 sm:px-8 lg:px-12 py-10 flex-1 flex flex-col gap-16 max-w-5xl w-full mx-auto">
+
+                <!-- SECCIÓN 1: INTRODUCCIÓN -->
+                <section id="introduccion" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            01</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Introducción</h2>
+                    </div>
+
+                    <!-- Intro Layout -->
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                        <!-- Main Introduction Box -->
+                        <div class="lg:col-span-2 flex flex-col gap-6">
+                            <div class="prose prose-navy dark:prose-invert max-w-none">
+                                <p
+                                    class="text-lg leading-relaxed font-light text-navy-600 dark:text-navy-300 first-letter:text-5xl first-letter:font-black first-letter:text-brand-600 dark:first-letter:text-brand-400 first-letter:mr-3 first-letter:float-left first-letter:mt-1">
+                                    Bienvenidos a nuestro portafolio digital de <strong>Voces informadas</strong>, somos
+                                    estudiantes de la carrera de psicología de la <strong>Universidad César
+                                        Vallejo</strong>.
+                                </p>
+                                <p class="text-base leading-relaxed text-navy-600 dark:text-navy-300">
+                                    Este blog tiene como objetivo recopilar y presentar las evidencias de aprendizaje
+                                    desarrolladas durante el curso. Cada sección contiene actividades, trabajos y
+                                    producciones académicas elaboradas durante las sesiones del curso, permitiendo
+                                    evidenciar el desarrollo de habilidades de comprensión, análisis, síntesis,
+                                    comunicación oral y escrita.
+                                </p>
+                            </div>
+
+                            <!-- Tabs Component for Justification & Objectives -->
+                            <div class="glass-card rounded-2xl p-6 shadow-sm flex flex-col gap-4">
+                                <div class="flex border-b border-navy-200 dark:border-navy-800">
+                                    <button onclick="switchTab('tab-justificacion', 'tab-content-justificacion')"
+                                        class="tab-btn pb-3 px-4 text-sm font-semibold border-b-2 border-brand-500 text-brand-600 dark:text-brand-400"
+                                        id="btn-justificacion">
+                                        Justificación del Proyecto
+                                    </button>
+                                    <button onclick="switchTab('tab-objetivos', 'tab-content-objetivos')"
+                                        class="tab-btn pb-3 px-4 text-sm font-semibold border-b-2 border-transparent text-navy-400 hover:text-navy-600 dark:text-navy-500 dark:hover:text-navy-300"
+                                        id="btn-objetivos">
+                                        Objetivos Académicos
+                                    </button>
+                                </div>
+
+                                <div id="tab-content-justificacion" class="tab-content transition-all duration-200">
+                                    <p class="text-sm leading-relaxed text-navy-600 dark:text-navy-300">
+                                        A nivel epidemiológico, el TLP ostenta una alta relevancia clínica con una
+                                        prevalencia de alrededor del <strong>1.4% a los 16 años</strong> y un alarmante
+                                        incremento de hasta el <strong>3.2% a los 22 años</strong>. Esta brecha etaria
+                                        demuestra que la juventud y la transición a la adultez son fases críticas de
+                                        vulnerabilidad.
+                                    </p>
+                                    <p class="text-sm leading-relaxed text-navy-600 dark:text-navy-300 mt-3">
+                                        Por ello, este proyecto se justifica en la imperiosa necesidad de compilar y
+                                        estructurar datos científicos cruciales para estudiantes de ciencias de la
+                                        salud, educadores y público general. El diseño de este recurso interactivo busca
+                                        desestigmatizar este diagnóstico de salud mental, facilitando la comprensión
+                                        académica profunda mediante material visualmente claro y de libre acceso.
+                                    </p>
+                                </div>
+
+                                <div id="tab-content-objetivos" class="tab-content hidden transition-all duration-200">
+                                    <ul class="space-y-3 text-sm text-navy-600 dark:text-navy-300">
+                                        <li class="flex items-start gap-2.5">
+                                            <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span><strong>Divulgar con Rigor:</strong> Traducir la literatura
+                                                psiquiátrica y psicoterapéutica compleja en materiales didácticos
+                                                accesibles para estudiantes y público interesado.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2.5">
+                                            <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span><strong>Sensibilizar sobre el Apego:</strong> Resaltar el impacto
+                                                crítico de las vivencias infantiles y los tipos de apego en el
+                                                desarrollo emocional adolescente.</span>
+                                        </li>
+                                        <li class="flex items-start gap-2.5">
+                                            <svg class="w-5 h-5 text-brand-500 shrink-0 mt-0.5" fill="none"
+                                                stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                            </svg>
+                                            <span><strong>Optimizar Competencias:</strong> Demostrar la aplicación
+                                                práctica de textos y exposiciones académicas en la socialización de
+                                                problemáticas de salud.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Stats Box -->
+                        <div class="flex flex-col gap-6">
+                            <div
+                                class="bg-gradient-to-br from-brand-500 to-brand-700 text-white rounded-2xl p-6 shadow-md shadow-brand-500/10 flex flex-col justify-between min-h-[220px]">
+                                <div>
+                                    <span
+                                        class="text-brand-100 text-[10px] font-bold uppercase tracking-widest">Institución
+                                        Educativa</span>
+                                    <h3 class="academic-title text-xl font-bold mt-2 leading-tight">Universidad César
+                                        Vallejo</h3>
+                                    <p class="text-xs text-brand-50/90 leading-normal mt-2">
+                                        Escuela Profesional de Psicología. Comprometidos con el desarrollo integral y la
+                                        formación de profesionales líderes en la salud mental.
+                                    </p>
+                                </div>
+                                <div class="border-t border-brand-400/40 pt-4 mt-4">
+                                    <div class="flex items-center justify-between text-xs text-brand-100">
+                                        <span>Facultad de Ciencias de la Salud</span>
+                                        <span class="font-bold">UCV</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 2: MAPA CONCEPTUAL DEL TEXTO -->
+                <section id="mapa-conceptual" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            02</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Estructura y
+                            Propiedades del Texto Académico</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                        <!-- Image Container with Modal Trigger -->
+                        <div class="lg:col-span-3 flex flex-col gap-3">
+                            <div class="zoom-img-container rounded-2xl border border-navy-200 dark:border-navy-800 shadow-lg relative bg-white dark:bg-navy-900"
+                                onclick="openLightbox('mapa_conceptual.jpg', 'Mapa Conceptual: Estructura del Texto Académico')">
+                                <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tu archivo subido, asegúrate de guardarlo como 'mapa_conceptual.jpg' en la misma carpeta que este index.html -->
+                                <img src="mapa_conceptual.jpg"
+                                    alt="Mapa Conceptual sobre Estructura y Propiedades del Texto Académico"
+                                    class="w-full object-cover aspect-video"
+                                    onerror="this.src='https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=1200'; console.warn('No se encontró el archivo local mapa_conceptual.jpg, cargando imagen de respaldo en línea.')">
+
+                                <div
+                                    class="absolute bottom-3 right-3 bg-navy-950/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                    </svg>
+                                    <span>Clic para Ampliar</span>
+                                </div>
+                            </div>
+                            <span class="text-xs text-navy-400 dark:text-navy-500 text-center italic">Ilustración 1:
+                                Mapa mental y conceptual de la estructura, propiedades y taxonomía del texto.</span>
+                        </div>
+
+                        <!-- Explanatory Content -->
+                        <div class="lg:col-span-2 flex flex-col gap-5">
+                            <div class="border-l-4 border-brand-500 pl-4 py-1">
+                                <h3 class="text-base font-bold text-navy-900 dark:text-white">Conceptualización y
+                                    Dimensiones del Discurso</h3>
+                                <p class="text-xs text-navy-400 dark:text-navy-500">Un análisis formal desde la teoría
+                                    del lenguaje</p>
+                            </div>
+
+                            <div class="space-y-4 text-sm text-navy-600 dark:text-navy-300">
+                                <div>
+                                    <h4
+                                        class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">
+                                        Definición (Barthes, Bajtín, Eco)</h4>
+                                    <p class="leading-relaxed">
+                                        El texto es concebido por Roland Barthes como un tejido activo de signos e
+                                        interpretaciones en constante cambio. Mijaíl Bajtín enfatiza su dimensión
+                                        dialógica, siendo un espacio interactivo de voces y discursos sociales. Por su
+                                        parte, Umberto Eco lo cataloga como una "máquina perezosa" que depende de la
+                                        cooperación constructiva del receptor para adquirir significado completo.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4
+                                        class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">
+                                        Propiedades Textuales Indispensables</h4>
+                                    <ul class="grid grid-cols-2 gap-2 text-xs">
+                                        <li
+                                            class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Coherencia:</strong> Unidad semántica lógica a nivel temático.
+                                        </li>
+                                        <li
+                                            class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Cohesión:</strong> Enlaces sintácticos entre oraciones.
+                                        </li>
+                                        <li
+                                            class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Adecuación:</strong> Adaptación al registro y contexto.
+                                        </li>
+                                        <li
+                                            class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Corrección:</strong> Cumplimiento de normas lingüísticas.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4
+                                        class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">
+                                        Análisis Estructural (Van Dijk)</h4>
+                                    <p class="leading-relaxed">
+                                        Para Teun van Dijk, el texto posee tres dimensiones críticas: la Superestructura
+                                        (el esqueleto formal), la Macroestructura (el contenido y tema central) y la
+                                        Microestructura (la cohesión gramatical interna).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Accordion (Scientific vs Academic Text) -->
+                    <div class="mt-6 border border-navy-200 dark:border-navy-800 rounded-2xl overflow-hidden shadow-sm">
+                        <button onclick="toggleAccordion('acc-diferencias')"
+                            class="w-full bg-white dark:bg-navy-900 px-6 py-4 flex items-center justify-between text-left font-semibold hover:bg-navy-100/50 dark:hover:bg-navy-800/50 transition-colors duration-200 focus:outline-none"
+                            id="acc-diferencias-btn">
+                            <span class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                                </svg>
+                                <span class="text-sm sm:text-base font-bold">Diferencia Crítica: Texto Académico vs.
+                                    Texto Científico</span>
+                            </span>
+                            <svg id="acc-diferencias-arrow"
+                                class="w-5 h-5 text-navy-400 transition-transform duration-200 transform" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="acc-diferencias-content"
+                            class="hidden border-t border-navy-200 dark:border-navy-800 bg-navy-50/50 dark:bg-navy-950/20 px-6 py-5 text-sm leading-relaxed text-navy-600 dark:text-navy-300">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <h4 class="font-bold text-brand-600 dark:text-brand-400 mb-2">El Texto Científico
+                                    </h4>
+                                    <p class="mb-3">
+                                        Tiene como propósito principal la <strong>comunicación de nuevos hallazgos e
+                                            investigación empírica original</strong>. Se dirige a pares dentro de una
+                                        comunidad de investigadores altamente especializada.
+                                    </p>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs">
+                                        <li>Rigurosa estructura normalizada (IMRyD: Introducción, Metodología,
+                                            Resultados y Discusión).</li>
+                                        <li>Lenguaje extremadamente preciso, técnico y libre de matices valorativos.
+                                        </li>
+                                        <li>Ejemplos comunes: artículos científicos de investigación (papers), informes
+                                            técnicos, patentes.</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-navy-800 dark:text-navy-200 mb-2">El Texto Académico</h4>
+                                    <p class="mb-3">
+                                        Tiene una intención fundamentalmente <strong>formativa, didáctica y de análisis
+                                            crítico</strong>. Su objetivo es transmitir, discutir y evaluar
+                                        conocimientos ya validados dentro del entorno de enseñanza superior.
+                                    </p>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs">
+                                        <li>Estructuras más flexibles (generalmente Introducción, Desarrollo,
+                                            Conclusión).</li>
+                                        <li>Permite el debate crítico y la reflexión argumentativa subjetiva pero
+                                            sustentada.</li>
+                                        <li>Ejemplos comunes: monografías, ensayos críticos, tesis académicas, resúmenes
+                                            analíticos.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 3: TRÁILER DEL TEXTO EXPOSITIVO -->
+                <section id="trailer-video" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            03</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Recurso
+                            Audiovisual Introductorio</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-6">
+                        <!-- Video Responsive Frame -->
+                        <div
+                            class="relative w-full aspect-video rounded-2xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-xl bg-navy-900">
+                            <!-- COMENTARIO PARA EL USUARIO: Reemplaza 'dQw4w9WgXcQ' en el src por el ID de tu video de YouTube o URL correspondiente -->
+                            <iframe class="absolute inset-0 w-full h-full"
+                                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                                title="Tráiler Audiovisual Expositivo del TLP" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+
+                        <!-- Video Description Card -->
+                        <div
+                            class="glass-card rounded-2xl p-6 shadow-sm border border-navy-200 dark:border-navy-800 flex flex-col md:flex-row items-start gap-4">
+                            <div
+                                class="p-3 bg-brand-500/10 dark:bg-brand-500/20 rounded-xl text-brand-600 dark:text-brand-400 shrink-0">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div class="flex flex-col gap-2">
+                                <h3 class="text-base font-bold text-navy-900 dark:text-white">Propósito Pedagógico del
+                                    Tráiler Audiovisual</h3>
+                                <p class="text-sm leading-relaxed text-navy-600 dark:text-navy-300">
+                                    Este recurso audiovisual de corta duración ha sido diseñado estratégicamente como
+                                    una herramienta didáctica y de sensibilización. Al integrar técnicas de narrativa
+                                    visual, voz en off y transiciones dramáticas, el tráiler busca capturar la atención
+                                    inmediata del público general y de los estudiantes universitarios. Traduce la
+                                    sintomatología compleja y abstracta del Trastorno Límite de la Personalidad (TLP) en
+                                    una experiencia visual impactante que fomenta la empatía, contextualiza el trastorno
+                                    e introduce los conceptos clave abordados formalmente en los textos escritos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 4: MAPA MENTAL DE TÉCNICAS DE COMUNICACIÓN ORAL -->
+                <section id="mapa-mental" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            04</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Técnicas de
+                            Comunicación Oral Expositivas</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+                        <!-- Content Column -->
+                        <div class="lg:col-span-2 flex flex-col gap-6 order-2 lg:order-1">
+                            <div class="border-l-4 border-brand-500 pl-4 py-1">
+                                <h3 class="text-base font-bold text-navy-900 dark:text-white">Estrategias y Estructuras Expositivas</h3>
+                                <p class="text-xs text-navy-400 dark:text-navy-500">Habilidades fundamentales de oratoria académica</p>
+                            </div>
+
+                            <div class="space-y-4 text-sm text-navy-600 dark:text-navy-300">
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">¿Qué es?</h4>
+                                    <p class="leading-relaxed">
+                                        Es una forma de comunicación oral donde una persona explica un tema determinado. Su objetivo principal es informar o dar a conocer diversas ideas con claridad, y se emplea comúnmente en exposiciones, clases y conferencias.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">Objetivo</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs">
+                                        <li>Transmitir la información de manera clara.</li>
+                                        <li>Hacer que el público entienda el tema.</li>
+                                        <li>Mantener la atención de los oyentes.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">Estructura de la Exposición</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs">
+                                        <li><strong>Introducción:</strong> Presentación del tema.</li>
+                                        <li><strong>Desarrollo:</strong> Explicación de ideas principales.</li>
+                                        <li><strong>Cierre:</strong> Resumen o conclusión.</li>
+                                    </ul>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">Técnicas Principales</h4>
+                                    <div class="grid grid-cols-2 gap-2 text-xs">
+                                        <div class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Claridad:</strong> Usar palabras simples.
+                                        </div>
+                                        <div class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Orden:</strong> Ideas organizadas (inicio, desarrollo, cierre).
+                                        </div>
+                                        <div class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Voz:</strong> Buena entonación y volumen.
+                                        </div>
+                                        <div class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40">
+                                            <strong>Lenguaje Corporal:</strong> Gestos y contacto visual.
+                                        </div>
+                                        <div class="bg-navy-100/50 dark:bg-navy-900/50 p-2 rounded-lg border border-navy-200/40 dark:border-navy-800/40 col-span-2">
+                                            <strong>Apoyos Visuales y Ejemplos:</strong> Imágenes o diapositivas para ayudar a entender mejor.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <h4 class="font-semibold text-navy-900 dark:text-white text-xs uppercase tracking-wider mb-1">Recomendaciones</h4>
+                                    <ul class="list-disc pl-5 space-y-1 text-xs">
+                                        <li>Practicar antes de exponer.</li>
+                                        <li>Hablar con seguridad.</li>
+                                        <li>No leer todo el texto.</li>
+                                        <li>Controlar los nervios.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Image Column with Modal Trigger -->
+                        <div class="lg:col-span-3 flex flex-col gap-3 order-1 lg:order-2">
+                            <div class="zoom-img-container rounded-2xl border border-navy-200 dark:border-navy-800 shadow-lg relative bg-white dark:bg-navy-900"
+                                onclick="openLightbox('mapa_mental.jpg', 'Mapa Mental: Técnicas de Comunicación Oral')">
+                                <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tu archivo subido, asegúrate de guardarlo como 'mapa_mental.jpg' en la misma carpeta que este index.html -->
+                                <img src="mapa_mental.jpg"
+                                    alt="Mapa Mental sobre Técnicas de Comunicación Oral Expositivas"
+                                    class="w-full object-cover aspect-video"
+                                    onerror="this.src='https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200'; console.warn('No se encontró el archivo local mapa_mental.jpg, cargando imagen de respaldo en línea.')">
+
+                                <div
+                                    class="absolute bottom-3 right-3 bg-navy-950/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-1.5 rounded-lg flex items-center gap-1.5 shadow-sm">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                                    </svg>
+                                    <span>Clic para Ampliar</span>
+                                </div>
+                            </div>
+                            <span class="text-xs text-navy-400 dark:text-navy-500 text-center italic">Ilustración 2:
+                                Mapa mental y conceptual de habilidades orales, recomendaciones y técnicas
+                                expositivas.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 5: PRODUCCIÓN ACADÉMICA (SÍNTESIS Y RESEÑA) -->
+                <section id="produccion-academica" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            05</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Producción
+                            Académica: Síntesis y Reseña</h2>
+                    </div>
+
+                    <!-- Layout: Dual columns for Synthesis and Review -->
+                    <div class="flex flex-col gap-10">
+
+                        <!-- BLOCK 1: ACADEMIC ARTICLE (SYNTHESIS) -->
+                        <article
+                            class="bg-white dark:bg-navy-900 border border-navy-200/80 dark:border-navy-800/80 rounded-2xl p-6 sm:p-8 shadow-sm">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 uppercase tracking-widest mb-4">
+                                Síntesis del Texto Expositivo
+                            </span>
+
+                            <h3
+                                class="academic-title text-2xl sm:text-3xl font-extrabold text-navy-950 dark:text-white mb-6">
+                                Evolución y Fronteras en el Tratamiento del Trastorno Límite de la Personalidad
+                                (2021-2026)
+                            </h3>
+
+                            <!-- Article Meta -->
+                            <div
+                                class="flex flex-wrap items-center gap-4 text-xs text-navy-400 dark:text-navy-500 mb-6 pb-6 border-b border-navy-100 dark:border-navy-800">
+                                <span>Por: <strong class="text-navy-600 dark:text-navy-300">Equipo Voces
+                                        Informadas</strong></span>
+                                <span>•</span>
+                                <span>Fecha: Junio 2026</span>
+                                <span>•</span>
+                                <span>Lectura: 6 min</span>
+                            </div>
+
+                            <div
+                                class="space-y-6 text-sm text-navy-600 dark:text-navy-300 leading-relaxed text-justify">
+                                <h4 class="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">
+                                    Introducción</h4>
+                                <p>
+                                    En el lustro reciente (2021-2026), el abordaje clínico y terapéutico del Trastorno
+                                    Límite de la Personalidad (TLP) ha experimentado una transición de paradigma sin
+                                    precedentes. Tradicionalmente considerado en el ámbito psiquiátrico como un
+                                    diagnóstico de difícil pronóstico y refractario a la intervención a largo plazo, la
+                                    evidencia científica contemporánea ha reclasificado esta condición como un desorden
+                                    dinámico, altamente tratable, con sólidas posibilidades de remisión sostenida cuando
+                                    se implementan protocolos basados en la evidencia de forma temprana y sistemática.
+                                </p>
+
+                                <h4 class="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">
+                                    Desarrollo</h4>
+                                <p>
+                                    Uno de los hitos más determinantes en el panorama terapéutico moderno ha sido la
+                                    consolidación e implementación clínica de la **Terapia Focalizada en la
+                                    Transferencia (TFP)**. Basada en el marco conceptual de las relaciones de objeto de
+                                    la escuela psicoanalítica de Otto Kernberg, la TFP trasciende la mera disminución de
+                                    los síntomas de desregulación conductual (como las conductas autolesivas o los
+                                    intentos de suicidio). Esta metodología busca de forma deliberada la
+                                    reestructuración estructural del paciente. Su meta última es guiar la psique desde
+                                    la Organización Límite de la Personalidad (OLP), dominada por el mecanismo de la
+                                    escisión y una identidad difusa, hacia una **Organización Neurótica de la
+                                    Personalidad (ONP)**, facilitando la integración representacional del *yo* y de los
+                                    *otros* significativos.
+                                </p>
+                                <p>
+                                    De forma complementaria, el consenso etiológico se ha reorientado drásticamente
+                                    hacia una perspectiva informada por el trauma. Investigaciones de neuroimagen y
+                                    genética demuestran que la predisposición y vulnerabilidad temperamental biológica
+                                    al TLP se activa críticamente ante experiencias de **trauma infantil** (abusos
+                                    verbales, físicos y emocionales, negligencia física o negligencia emocional
+                                    crónica). Estas vivencias configuran un apego desorganizado en los primeros años de
+                                    vida que altera significativamente el desarrollo estructural del eje
+                                    hipotálamo-hipófisis-adrenal (HPA) y las estructuras prefrontales encargadas de
+                                    regular las emociones.
+                                </p>
+                                <p>
+                                    Como respuesta directa a este entendimiento etiológico, se han desarrollado e
+                                    implementado programas rigurosos de **detección e intervención temprana en
+                                    adolescentes y jóvenes**. Este avance ha roto el antiguo dogma clínico que
+                                    postergaba el diagnóstico del TLP hasta la mayoría de edad, permitiendo hoy
+                                    intervenir en fases prodrómicas antes de que los patrones desadaptativos se
+                                    consoliden e impidan el adecuado desarrollo social, escolar y vocacional del
+                                    paciente.
+                                </p>
+                                <p>
+                                    Por último, se ha constatado el imperioso requerimiento de brindar una **atención
+                                    integral a las comorbilidades físicas** de los pacientes con TLP. Debido a la
+                                    constante hiperactividad del sistema nervioso simpático provocada por la
+                                    desregulación emocional crónica, estos individuos presentan tasas muy elevadas de
+                                    patologías cardiovasculares y trastornos metabólicos (como el síndrome metabólico y
+                                    la diabetes tipo 2), riesgos que se ven exacerbados por los efectos colaterales de
+                                    la polifarmacia psiquiátrica.
+                                </p>
+
+                                <h4 class="font-bold text-navy-900 dark:text-white uppercase tracking-wider text-xs">
+                                    Conclusión</h4>
+                                <p>
+                                    El avance científico de los últimos años concluye que el tratamiento del TLP exige
+                                    una aproximación multidisciplinar que fusione la psicoterapia estructurada
+                                    focalizada en la identidad, la consideración profunda del trauma infantil, la
+                                    intervención temprana en adolescentes y el cuidado minucioso de la salud física y
+                                    cardiometabólica del paciente.
+                                </p>
+                            </div>
+                        </article>
+
+                        <!-- BLOCK 2: ACADEMIC REVIEW (ODS INTEGRATION) -->
+                        <div
+                            class="bg-gradient-to-br from-navy-900 via-navy-800 to-brand-950 text-white rounded-2xl p-6 sm:p-8 shadow-md">
+                            <span
+                                class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 border border-brand-500/40 text-brand-300 uppercase tracking-widest mb-4">
+                                Reseña Comparativa
+                            </span>
+
+                            <h3 class="academic-title text-2xl font-extrabold mb-4 text-white">
+                                Innovación Digital y Compromiso Social: Una Mirada Crítica al Portafolio "Voces
+                                Informadas"
+                            </h3>
+
+                            <div class="space-y-4 text-sm text-navy-200/90 leading-relaxed text-justify">
+                                <p>
+                                    El portafolio académico digital "Voces Informadas" constituye una propuesta valiosa
+                                    que trasciende los límites del ejercicio estudiantil convencional. Este espacio web
+                                    se inserta con solidez en el marco del **Objetivo de Desarrollo Sostenible 3 (ODS 3:
+                                    Salud y Bienestar)** de las Naciones Unidas, específicamente en su meta orientada a
+                                    promover la salud mental y fortalecer la prevención y el tratamiento del sufrimiento
+                                    psicológico. Al proveer un canal de difusión que explica rigurosamente el TLP
+                                    —reduciendo el estigma social de este diagnóstico mediante datos de prevalencia de
+                                    libre acceso—, el blog actúa como un agente de concientización y educación
+                                    sanitaria.
+                                </p>
+                                <p>
+                                    Simultáneamente, la conceptualización del blog interactivo se vincula con el
+                                    **Objetivo de Desarrollo Sostenible 9 (ODS 9: Industria, Innovación e
+                                    Infraestructura)**. La incorporación y el acceso a tecnologías de la información y
+                                    la comunicación (TIC) aplicadas al entorno pedagógico universitario representan un
+                                    modelo de innovación didáctica. El uso de recursos interactivos como el visor
+                                    digital de mapas, los videos explicativos integrados y la estructuración del blog
+                                    como una Single Page Application (SPA) optimizan la transferencia del conocimiento
+                                    científico. Esto demuestra que la digitalización y el software frontend, cuando son
+                                    diseñados con principios de usabilidad académica, son indispensables para
+                                    democratizar la educación y la salud mental colectiva.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN 6: ANEXOS Y COEVALUACIÓN -->
+                <section id="anexos-coevaluacion" class="scroll-mt-24">
+                    <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
+                            06</div>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Evidencias
+                            Visuales y Ficha de Coevaluación</h2>
+                    </div>
+
+                    <div class="flex flex-col gap-10">
+
+                        <!-- GALLERY BLOCK -->
+                        <div>
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 no-print">
+                                <div class="border-l-4 border-brand-500 pl-4 py-1">
+                                    <h3 class="text-base font-bold text-navy-900 dark:text-white">Galería de Evidencias
+                                    </h3>
+                                    <p class="text-xs text-navy-400 dark:text-navy-500">Registro visual de las
+                                        actividades del panel expositivo</p>
+                                </div>
+
+                                <!-- Gallery Filters -->
+                                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                                    <button onclick="filterGallery('all')"
+                                        class="gallery-filter-btn px-3 py-1.5 rounded-lg bg-brand-500 text-white shadow-sm transition-all duration-200">
+                                        Todos
+                                    </button>
+                                    <button onclick="filterGallery('panel')"
+                                        class="gallery-filter-btn px-3 py-1.5 rounded-lg bg-white dark:bg-navy-900 text-navy-600 dark:text-navy-300 border border-navy-200 dark:border-navy-800 hover:bg-navy-100 dark:hover:bg-navy-800 transition-all duration-200">
+                                        Exposición
+                                    </button>
+                                    <button onclick="filterGallery('equipo')"
+                                        class="gallery-filter-btn px-3 py-1.5 rounded-lg bg-white dark:bg-navy-900 text-navy-600 dark:text-navy-300 border border-navy-200 dark:border-navy-800 hover:bg-navy-100 dark:hover:bg-navy-800 transition-all duration-200">
+                                        Reuniones
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Gallery Grid -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                                <!-- Gallery Item 1 -->
+                                <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
+                                    data-category="panel"
+                                    onclick="openLightbox('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200', 'Registro del Panel Expositivo del Grupo')">
+                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes del panel, reemplaza este src por la ruta local de tu archivo (ej: image_c17beb.jpg) -->
+                                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600"
+                                        alt="Exposición del Panel"
+                                        class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                                        <span
+                                            class="text-[10px] text-brand-400 font-bold uppercase tracking-wider">Sesión
+                                            de Exposición</span>
+                                        <h4 class="text-sm font-bold truncate">Grabación del Panel Académico</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Gallery Item 2 -->
+                                <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
+                                    data-category="equipo"
+                                    onclick="openLightbox('https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=1200', 'Reunión de Planificación y Organización del Equipo')">
+                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes, reemplaza este src por la ruta local de tu archivo (ej: image_c17bce.jpg) -->
+                                    <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=600"
+                                        alt="Reunión de Equipo"
+                                        class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                                        <span
+                                            class="text-[10px] text-brand-400 font-bold uppercase tracking-wider">Reuniones
+                                            de Equipo</span>
+                                        <h4 class="text-sm font-bold truncate">Planificación de Contenidos</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Gallery Item 3 -->
+                                <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
+                                    data-category="panel"
+                                    onclick="openLightbox('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200', 'Preparación de Materiales para el Simposio')">
+                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes, reemplaza este src por la ruta local de tu archivo (ej: image_c17bcf.jpg) -->
+                                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600"
+                                        alt="Materiales Simposio"
+                                        class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-gradient-to-t from-navy-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
+                                        <span
+                                            class="text-[10px] text-brand-400 font-bold uppercase tracking-wider">Sesión
+                                            de Exposición</span>
+                                        <h4 class="text-sm font-bold truncate">Puesta a punto y Diapositivas</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COEVALUATION BLOCK -->
+                        <div
+                            class="border border-navy-200 dark:border-navy-800 rounded-2xl overflow-hidden shadow-sm bg-white dark:bg-navy-900 print:border-none print:shadow-none">
+                            <div
+                                class="p-6 border-b border-navy-200 dark:border-navy-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 print:border-none">
+                                <div class="border-l-4 border-brand-500 pl-4 py-1">
+                                    <h3 class="text-base font-bold text-navy-900 dark:text-white">Ficha de Coevaluación
+                                        del Equipo</h3>
+                                    <p class="text-xs text-navy-400 dark:text-navy-500">Métricas de desempeño
+                                        cooperativo grupal</p>
+                                </div>
+                                <button onclick="window.print()"
+                                    class="no-print inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-brand-500 hover:bg-brand-600 active:bg-brand-700 text-white font-bold text-xs shadow-sm hover:shadow transition-all duration-200">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+                                    </svg>
+                                    <span>Imprimir / Guardar Ficha</span>
+                                </button>
+                            </div>
+
+                            <!-- Interactive Table / Ficha de Coevaluación -->
+                            <div class="overflow-x-auto p-4 sm:p-6 print:p-0">
+                                <table class="w-full text-left border-collapse text-xs sm:text-sm">
+                                    <thead>
+                                        <tr
+                                            class="border-b border-navy-200 dark:border-navy-800 text-navy-400 dark:text-navy-500">
+                                            <th class="py-3 px-4 font-semibold">Criterio de Evaluación</th>
+                                            <th class="py-3 px-4 font-semibold text-center">Puntaje Máximo</th>
+                                            <th class="py-3 px-4 font-semibold text-center">Autoevaluación</th>
+                                            <th class="py-3 px-4 font-semibold text-center">Promedio Equipo</th>
+                                            <th class="py-3 px-4 font-semibold">Estado de Logro</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody
+                                        class="divide-y divide-navy-100 dark:divide-navy-800 text-navy-600 dark:text-navy-300">
+                                        <tr>
+                                            <td class="py-4 px-4 font-medium">
+                                                <strong>1. Participación e Involucramiento:</strong>
+                                                <span
+                                                    class="block text-xs text-navy-400 dark:text-navy-500 font-normal mt-0.5">Asistencia
+                                                    a las reuniones y compromiso activo con las metas grupales.</span>
+                                            </td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center font-bold text-navy-900 dark:text-white">
+                                                5.0</td>
+                                            <td class="py-4 px-4">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px]">Excelente</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-4 px-4 font-medium">
+                                                <strong>2. Puntualidad y Cumplimiento:</strong>
+                                                <span
+                                                    class="block text-xs text-navy-400 dark:text-navy-500 font-normal mt-0.5">Entrega
+                                                    a tiempo de las tareas individuales (gráficos, textos,
+                                                    videos).</span>
+                                            </td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center">4.8</td>
+                                            <td class="py-4 px-4 text-center font-bold text-navy-900 dark:text-white">
+                                                4.9</td>
+                                            <td class="py-4 px-4">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px]">Excelente</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-4 px-4 font-medium">
+                                                <strong>3. Calidad del Aporte Académico:</strong>
+                                                <span
+                                                    class="block text-xs text-navy-400 dark:text-navy-500 font-normal mt-0.5">Rigurosidad
+                                                    en el contenido y la redacción de los artículos sobre TLP.</span>
+                                            </td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center font-bold text-navy-900 dark:text-white">
+                                                5.0</td>
+                                            <td class="py-4 px-4">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px]">Excelente</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="py-4 px-4 font-medium">
+                                                <strong>4. Trabajo Colaborativo y Comunicación:</strong>
+                                                <span
+                                                    class="block text-xs text-navy-400 dark:text-navy-500 font-normal mt-0.5">Apertura
+                                                    al diálogo, empatía, feedback constructivo y respeto mutuo.</span>
+                                            </td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center">4.9</td>
+                                            <td class="py-4 px-4 text-center font-bold text-navy-900 dark:text-white">
+                                                4.9</td>
+                                            <td class="py-4 px-4">
+                                                <span
+                                                    class="inline-flex items-center gap-1.5 px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-[10px]">Excelente</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr
+                                            class="bg-navy-50 dark:bg-navy-800/50 font-bold text-navy-900 dark:text-white">
+                                            <td class="py-4 px-4 rounded-l-xl">Promedio General de Rendimiento Grupal
+                                            </td>
+                                            <td class="py-4 px-4 text-center">5.0</td>
+                                            <td class="py-4 px-4 text-center">4.92</td>
+                                            <td class="py-4 px-4 text-center text-brand-600 dark:text-brand-400">4.95
+                                            </td>
+                                            <td class="py-4 px-4 rounded-r-xl">
+                                                <span
+                                                    class="text-brand-600 dark:text-brand-400 uppercase tracking-wider text-[11px]">Meta
+                                                    Lograda</span>
+                                            </td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- FOOTER -->
+            <footer
+                class="mt-auto border-t border-navy-200 dark:border-navy-800 py-10 px-6 bg-white dark:bg-navy-900 text-center text-xs text-navy-400 dark:text-navy-500 no-print">
+                <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <p>© 2026 Voces Informadas. Creado para el proyecto académico de comunicación en Ciencias de la
+                        Salud.</p>
+                    <p class="font-medium text-navy-600 dark:text-navy-300">Desplegado en GitHub Pages.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- LIGHTBOX MODAL COMPONENT (For expanding maps and gallery images) -->
+    <div id="lightbox"
+        class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-md hidden flex-col items-center justify-center p-4 select-none no-print">
+        <!-- Close button lightbox -->
+        <button onclick="closeLightbox()"
+            class="absolute top-4 right-4 p-2.5 rounded-full bg-navy-900/50 hover:bg-navy-800 border border-navy-700/50 text-white transition-colors duration-200"
+            aria-label="Cerrar vista">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+
+        <!-- Lightbox Content -->
+        <div class="relative max-w-5xl w-full max-h-[80vh] flex items-center justify-center">
+            <img id="lightbox-img"
+                class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl transition-transform duration-300 transform scale-100"
+                src="" alt="">
+        </div>
+
+        <!-- Lightbox Info/Metadata -->
+        <div class="mt-4 text-center text-white flex flex-col gap-1 max-w-2xl px-6">
+            <h4 id="lightbox-caption" class="text-sm sm:text-base font-bold"></h4>
+            <div class="flex items-center justify-center gap-4 text-xs text-brand-400 mt-2 font-medium">
+                <button onclick="zoomLightbox(0.1)" class="hover:text-brand-300 flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 9v3m0 0v3m0-3h3m-3 0H7m12 11l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <span>Zoom +</span>
+                </button>
+                <button onclick="zoomLightbox(-0.1)" class="hover:text-brand-300 flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M15 12H9m12 15l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <span>Zoom -</span>
+                </button>
+                <button onclick="resetZoomLightbox()" class="hover:text-brand-300 flex items-center gap-1.5">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12" />
+                    </svg>
+                    <span>Restablecer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FOR DOM INTERACTIONS, ANIMATIONS & SCROLLSPY -->
+    <script>
+        // --- MOBILE DRAWER MENUS ---
+        const sidebar = document.getElementById('sidebar');
+        const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('-translate-x-full');
+            sidebarBackdrop.classList.toggle('hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleSidebar);
+        closeSidebarBtn.addEventListener('click', toggleSidebar);
+        sidebarBackdrop.addEventListener('click', toggleSidebar);
+
+        // Close mobile drawer when clicking navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!sidebar.classList.contains('-translate-x-full')) {
+                    toggleSidebar();
+                }
+            });
+        });
+
+
+        // --- DARK MODE / THEME SWITCHER ---
+        const htmlElement = document.documentElement;
+
+        // Desktop Button & Icons
+        const themeToggleDesktop = document.getElementById('theme-toggle-desktop');
+        const themeToggleTextDesktop = document.getElementById('theme-toggle-text-desktop');
+        const themeToggleLightIconDesktop = document.getElementById('theme-toggle-light-icon-desktop');
+        const themeToggleDarkIconDesktop = document.getElementById('theme-toggle-dark-icon-desktop');
+
+        // Mobile Button & Icons
+        const themeToggleMobile = document.getElementById('theme-toggle-mobile');
+        const themeToggleLightIconMobile = document.getElementById('theme-toggle-light-icon-mobile');
+        const themeToggleDarkIconMobile = document.getElementById('theme-toggle-dark-icon-mobile');
+
+        // Check stored theme or system preference
+        const currentTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (currentTheme === 'dark' || (!currentTheme && systemPrefersDark)) {
+            htmlElement.classList.add('dark');
+            showSunIcon();
+        } else {
+            htmlElement.classList.remove('dark');
+            showMoonIcon();
+        }
+
+        function showSunIcon() {
+            // Desktop
+            themeToggleLightIconDesktop.classList.remove('hidden');
+            themeToggleDarkIconDesktop.classList.add('hidden');
+            themeToggleTextDesktop.textContent = 'Modo Claro';
+            // Mobile
+            themeToggleLightIconMobile.classList.remove('hidden');
+            themeToggleDarkIconMobile.classList.add('hidden');
+        }
+
+        function showMoonIcon() {
+            // Desktop
+            themeToggleLightIconDesktop.classList.add('hidden');
+            themeToggleDarkIconDesktop.classList.remove('hidden');
+            themeToggleTextDesktop.textContent = 'Modo Oscuro';
+            // Mobile
+            themeToggleLightIconMobile.classList.add('hidden');
+            themeToggleDarkIconMobile.classList.remove('hidden');
+        }
+
+        function toggleTheme() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+                showMoonIcon();
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+                showSunIcon();
+            }
+        }
+
+        themeToggleDesktop.addEventListener('click', toggleTheme);
+        themeToggleMobile.addEventListener('click', toggleTheme);
+
+
+        // --- TABS (SECCIÓN 1) ---
+        function switchTab(tabId, contentId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Show selected content
+            document.getElementById(contentId).classList.remove('hidden');
+
+            // Reset tab button states
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-brand-500', 'text-brand-600', 'dark:text-brand-400');
+                btn.classList.add('border-transparent', 'text-navy-400', 'hover:text-navy-600', 'dark:text-navy-500', 'dark:hover:text-navy-300');
+            });
+
+            // Set active button state
+            let activeBtn = document.getElementById(tabId === 'tab-justificacion' ? 'btn-justificacion' : 'btn-objetivos');
+            activeBtn.classList.remove('border-transparent', 'text-navy-400', 'hover:text-navy-600', 'dark:text-navy-500', 'dark:hover:text-navy-300');
+            activeBtn.classList.add('border-brand-500', 'text-brand-600', 'dark:text-brand-400');
+        }
+
+
+        // --- ACCORDIONS (SECCIÓN 2) ---
+        function toggleAccordion(accordionId) {
+            const content = document.getElementById(`${accordionId}-content`);
+            const arrow = document.getElementById(`${accordionId}-arrow`);
+
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                arrow.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                arrow.classList.remove('rotate-180');
+            }
+        }
+
+
+        // --- SCROLLSPY (Active Navigation Reshighlight on Scroll) ---
+        const sections = document.querySelectorAll('section[id]');
+        const navItems = document.querySelectorAll('.nav-link');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px -20% -60% 0px', // Trigger near top half of screen
+            threshold: 0
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const activeId = entry.target.getAttribute('id');
+
+                    navItems.forEach(item => {
+                        const href = item.getAttribute('href');
+                        if (href === `#${activeId}`) {
+                            item.classList.add('nav-link-active');
+                        } else {
+                            item.classList.remove('nav-link-active');
+                        }
+                    });
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        sections.forEach(section => observer.observe(section));
+
+
+        // --- LIGHTBOX VISUALIZADOR DE IMÁGENES & MAPAS ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        let currentScale = 1;
+
+        function openLightbox(imgSrc, captionText) {
+            lightboxImg.src = imgSrc;
+            lightboxCaption.textContent = captionText;
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            resetZoomLightbox();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+        }
+
+        function zoomLightbox(factor) {
+            currentScale += factor;
+            // Bound zoom
+            if (currentScale < 0.5) currentScale = 0.5;
+            if (currentScale > 3) currentScale = 3;
+            lightboxImg.style.transform = `scale(${currentScale})`;
+        }
+
+        function resetZoomLightbox() {
+            currentScale = 1;
+            lightboxImg.style.transform = `scale(${currentScale})`;
+        }
+
+        // Close lightbox on clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox || e.target.id === 'lightbox-img-wrapper') {
+                closeLightbox();
+            }
+        });
+
+
+        // --- GALERÍA DE EVIDENCIAS (FILTROS) ---
+        function filterGallery(category) {
+            // Handle filter buttons highlight
+            const buttons = document.querySelectorAll('.gallery-filter-btn');
+            buttons.forEach(btn => {
+                // Set default colors
+                btn.classList.remove('bg-brand-500', 'text-white', 'shadow-sm');
+                btn.classList.add('bg-white', 'dark:bg-navy-900', 'text-navy-600', 'dark:text-navy-300', 'border', 'border-navy-200', 'dark:border-navy-800', 'hover:bg-navy-100', 'dark:hover:bg-navy-800');
+            });
+
+            // Set active color to clicked button
+            const activeBtn = event.currentTarget;
+            activeBtn.classList.remove('bg-white', 'dark:bg-navy-900', 'text-navy-600', 'dark:text-navy-300', 'border', 'border-navy-200', 'dark:border-navy-800', 'hover:bg-navy-100', 'dark:hover:bg-navy-800');
+            activeBtn.classList.add('bg-brand-500', 'text-white', 'shadow-sm');
+
+            // Handle items display
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.classList.remove('hidden');
+                    // Add smooth fading entrance
+                    item.classList.add('animate-fade-in');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
