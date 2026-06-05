@@ -298,7 +298,7 @@
                         class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
                         <span
                             class="text-xs bg-navy-100 dark:bg-navy-800 text-navy-500 dark:text-navy-400 w-5 h-5 rounded-md flex items-center justify-center font-bold">6</span>
-                        <span>Evidencias Visuales</span>
+                        <span>Ficha de Coevaluación</span>
                     </a>
                     <a href="#resena-ods9"
                         class="nav-link flex items-center gap-3 px-3 py-2.5 text-sm font-medium rounded-xl border-l-2 border-transparent text-navy-600 hover:text-brand-600 hover:bg-brand-50/40 dark:text-navy-300 dark:hover:text-brand-400 dark:hover:bg-brand-950/20 transition-all duration-200">
@@ -1098,18 +1098,19 @@
                     </div>
                 </section>
 
-                <!-- SECCIÓN 6: EVIDENCIAS VISUALES -->
+                <!-- SECCIÓN 6: FICHA DE COEVALUACIÓN DEL EQUIPO -->
                 <section id="anexos-coevaluacion" class="scroll-mt-24">
                     <div class="flex items-center gap-3 mb-6 border-b border-navy-200/80 dark:border-navy-800/80 pb-4">
                         <div
                             class="w-10 h-10 rounded-xl bg-brand-500/10 dark:bg-brand-500/20 text-brand-600 dark:text-brand-400 flex items-center justify-center font-bold text-lg">
                             06</div>
-                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Evidencias Visuales</h2>
+                        <h2 class="academic-title text-2xl sm:text-3xl font-extrabold tracking-tight">Ficha de Coevaluación del Equipo</h2>
                     </div>
 
                     <div class="flex flex-col gap-10">
 
-                        <!-- GALLERY BLOCK -->
+                        <!-- GALLERY BLOCK (Comentado temporalmente a solicitud) -->
+                        <!-- 
                         <div>
                             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 no-print">
                                 <div class="border-l-4 border-brand-500 pl-4 py-1">
@@ -1119,7 +1120,6 @@
                                         actividades del panel expositivo</p>
                                 </div>
 
-                                <!-- Gallery Filters -->
                                 <div class="flex flex-wrap gap-2 text-xs font-semibold">
                                     <button onclick="filterGallery('all')"
                                         class="gallery-filter-btn px-3 py-1.5 rounded-lg bg-brand-500 text-white shadow-sm transition-all duration-200">
@@ -1136,13 +1136,10 @@
                                 </div>
                             </div>
 
-                            <!-- Gallery Grid -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                                <!-- Gallery Item 1 -->
                                 <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
                                     data-category="panel"
                                     onclick="openLightbox('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1200', 'Registro del Panel Expositivo del Grupo')">
-                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes del panel, reemplaza este src por la ruta local de tu archivo (ej: image_c17beb.jpg) -->
                                     <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=600"
                                         alt="Exposición del Panel"
                                         class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
@@ -1155,11 +1152,9 @@
                                     </div>
                                 </div>
 
-                                <!-- Gallery Item 2 -->
                                 <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
                                     data-category="equipo"
                                     onclick="openLightbox('https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=1200', 'Reunión de Planificación y Organización del Equipo')">
-                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes, reemplaza este src por la ruta local de tu archivo (ej: image_c17bce.jpg) -->
                                     <img src="https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?auto=format&fit=crop&q=80&w=600"
                                         alt="Reunión de Equipo"
                                         class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
@@ -1172,11 +1167,9 @@
                                     </div>
                                 </div>
 
-                                <!-- Gallery Item 3 -->
                                 <div class="gallery-item group relative rounded-xl overflow-hidden border border-navy-200 dark:border-navy-800 shadow-sm cursor-pointer"
                                     data-category="panel"
                                     onclick="openLightbox('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=1200', 'Preparación de Materiales para el Simposio')">
-                                    <!-- COMENTARIO PARA EL USUARIO: Si deseas usar tus propias imágenes, reemplaza este src por la ruta local de tu archivo (ej: image_c17bcf.jpg) -->
                                     <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&q=80&w=600"
                                         alt="Materiales Simposio"
                                         class="w-full aspect-video md:aspect-square object-cover transition-transform duration-300 group-hover:scale-105">
@@ -1190,6 +1183,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
 
                         <!-- COEVALUATION BLOCK -->
                         <div
@@ -1446,49 +1440,52 @@
 
     <!-- LIGHTBOX MODAL COMPONENT (For expanding maps and gallery images) -->
     <div id="lightbox"
-        class="fixed inset-0 z-50 bg-navy-950/90 backdrop-blur-md hidden flex-col items-center justify-center p-4 select-none no-print">
-        <!-- Close button lightbox -->
-        <button onclick="closeLightbox()"
-            class="absolute top-4 right-4 p-2.5 rounded-full bg-navy-900/50 hover:bg-navy-800 border border-navy-700/50 text-white transition-colors duration-200"
-            aria-label="Cerrar vista">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-
-        <!-- Lightbox Content -->
-        <div class="relative max-w-5xl w-full max-h-[80vh] flex items-center justify-center">
-            <img id="lightbox-img"
-                class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl transition-transform duration-300 transform scale-100"
-                src="" alt="">
-        </div>
-
-        <!-- Lightbox Info/Metadata -->
-        <div class="mt-4 text-center text-white flex flex-col gap-1 max-w-2xl px-6">
-            <h4 id="lightbox-caption" class="text-sm sm:text-base font-bold"></h4>
-            <div class="flex items-center justify-center gap-4 text-xs text-brand-400 mt-2 font-medium">
-                <button onclick="zoomLightbox(0.1)" class="hover:text-brand-300 flex items-center gap-1.5">
+        class="fixed inset-0 z-50 bg-navy-950/95 backdrop-blur-md hidden flex-col select-none no-print">
+        
+        <!-- Header Bar (Always on top of the image container) -->
+        <div class="relative z-20 w-full bg-navy-950/80 backdrop-blur-md border-b border-navy-800/80 px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-white">
+            <div class="min-w-0 flex-1 text-center sm:text-left">
+                <h4 id="lightbox-caption" class="text-sm sm:text-base font-bold truncate text-navy-100"></h4>
+            </div>
+            
+            <div class="flex items-center gap-5 text-xs text-brand-400 font-semibold shrink-0">
+                <button onclick="zoomLightbox(0.1)" class="hover:text-brand-300 flex items-center gap-1.5 transition-colors duration-200">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M12 9v3m0 0v3m0-3h3m-3 0H7m12 11l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <span>Zoom +</span>
                 </button>
-                <button onclick="zoomLightbox(-0.1)" class="hover:text-brand-300 flex items-center gap-1.5">
+                <button onclick="zoomLightbox(-0.1)" class="hover:text-brand-300 flex items-center gap-1.5 transition-colors duration-200">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M15 12H9m12 15l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                     <span>Zoom -</span>
                 </button>
-                <button onclick="resetZoomLightbox()" class="hover:text-brand-300 flex items-center gap-1.5">
+                <button onclick="resetZoomLightbox()" class="hover:text-brand-300 flex items-center gap-1.5 transition-colors duration-200">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 4v5h.582m15.356 2A8.001 8.001 0 1121.21 7.89M9 11l3-3 3 3m-3-3v12" />
                     </svg>
                     <span>Restablecer</span>
                 </button>
+                <span class="text-navy-700 hidden sm:inline">|</span>
+                <button onclick="closeLightbox()"
+                    class="p-1.5 rounded-lg bg-navy-900/60 hover:bg-navy-800 border border-navy-700/50 text-white hover:text-red-400 transition-all duration-200"
+                    aria-label="Cerrar vista">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
+        </div>
+
+        <!-- Image Canvas Container (Flex-1) -->
+        <div id="lightbox-img-wrapper" class="flex-1 w-full flex items-center justify-center p-6 overflow-hidden relative z-10">
+            <img id="lightbox-img"
+                class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-transform duration-300 transform scale-100"
+                src="" alt="">
         </div>
     </div>
 
